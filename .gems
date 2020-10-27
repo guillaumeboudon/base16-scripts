@@ -1,0 +1,4 @@
+git -v 1.7.0
+parallel -v 1.19.2
+safe_yaml -v 1.0.5
+slugify -v 1.0.7
