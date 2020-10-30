@@ -23,7 +23,11 @@ module Base16
     def build(dir)
       file = File.join(dir, "#{@name}.sh")
       puts "Build #{file}"
-      content = "#!/usr/bin/env bash\n\n"
+      content = <<~STR
+        #!/usr/bin/env bash
+
+        export BASE16_THEME="#{@name}"
+      STR
 
       @bases.each do |base, value|
         content << "export BASE16_#{base}=\"#{value}\"\n"
