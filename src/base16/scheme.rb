@@ -21,7 +21,7 @@ module Base16
     end
 
     def build(dir)
-      file = File.join(dir, @name)
+      file = File.join(dir, "#{@name}.sh")
       puts "Build #{file}"
       content = "#!/usr/bin/env bash\n\n"
 
