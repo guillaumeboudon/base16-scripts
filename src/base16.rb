@@ -35,6 +35,7 @@ module Base16
 
     def build(dir = DEFAULT_BUILD_DIR)
       FileUtils.mkdir_p(dir)
+      FileUtils.rm(Dir.glob(File.join(dir, "*")))
 
       Base16::Scheme
         .load_all(File.join(Dir.pwd, DATA_ROOT, "schemes"))
