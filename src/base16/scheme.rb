@@ -15,8 +15,9 @@ module Base16
     def initialize(file)
       @bases = {}
       @name = File.basename(file, ".yaml").slugify
+      @content = SafeYAML.load(File.read(file))
 
-      extract_bases(SafeYAML.load(File.read(file)))
+      extract_bases
     end
 
     def build(dir)
@@ -33,9 +34,9 @@ module Base16
 
     private
 
-    def extract_bases(content)
+    def extract_bases
       %w[00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F].each do |base|
-        @bases[base] = content["base#{base}"]
+        @bases[base] = @content["base#{base}"]
       end
     end
   end
