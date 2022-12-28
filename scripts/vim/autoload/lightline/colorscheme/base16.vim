@@ -32,8 +32,8 @@ let s:p.normal.right    = [[s:color_00, s:color_05], [s:color_06, s:color_03]]
 let s:p.inactive.right  = [[s:color_07, s:color_02]]
 " let s:p.inactive.right  = [[s:color_01, s:color_00]]
 
-let s:p.normal.error    = [[s:color_07, s:color_08]]
-let s:p.normal.warning  = [[s:color_07, s:color_09]]
+let s:p.normal.error    = [[s:color_01, s:color_08]]
+let s:p.normal.warning  = [[s:color_01, s:color_09]]
 
 let s:p.tabline.left    = [[s:color_05, s:color_03]]
 let s:p.tabline.middle  = [[s:color_05, s:color_02]]
