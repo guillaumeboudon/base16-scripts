@@ -2,7 +2,7 @@
 # base16-shell (https://github.com/chriskempson/base16-shell)
 # Base16 Shell template by Chris Kempson (http://chriskempson.com)
 
-to_slash() { echo "$1" | sed "s/\(..\)\(..\)\(..\)/\1\/\2\/\3/g"; }
+to_slash() { echo "${1:0:2}/${1:2:2}/${1:4:2}"; }
 
 color00="$(to_slash "$BASE16_00")" # Base 00 - Black
 color01="$(to_slash "$BASE16_08")" # Base 08 - Red
